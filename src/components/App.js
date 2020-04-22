@@ -1,12 +1,19 @@
 import React from 'react';
 import '../scss/App.scss';
+import { Route, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-   
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="App">
+     
+      </div>
+    );
+  }
 }
 
 export default App;
