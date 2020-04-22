@@ -9,7 +9,7 @@ function Character (props) {
       
       <h2 className="character__name">{props.characterName}</h2>
 
-      <p className="character__species">{props.characterSpecies}</p>
+      <p className="character__species">Species: {props.characterSpecies}</p>
     </div>
   )
 }
