@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CharacterDetails = (props) => {
+  const episodesTotal = props.character.episode;
+  const episodesNumber = episodesTotal.length;
   return (
     <div className="character__details">
       <Link to="/" className="character__details--btn"> ≤ Home</Link>
@@ -14,12 +16,11 @@ const CharacterDetails = (props) => {
       <ul className="character__details--info">
         <li className="character__details--species">Species: {props.character.species}</li>
         <li className="character__details--origin">Origin: {props.character.origin.name}</li>
-        <li className="character__details--episode">Episodes: {props.character.episode}</li>
+        <li className="character__details--episode">Number of episodes: {episodesNumber}</li>
         <li className="character__details--status">Status: {props.character.status}</li>
       </ul>
     </div>
   )
 }
 
-// # episodes - object length
 export default CharacterDetails;
