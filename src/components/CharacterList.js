@@ -1,5 +1,6 @@
 import React from 'react';
 import Character from './Character';
+import { Link } from 'react-router-dom';
 
 const CharacterList = (props) => {
   const {characters, searchCharacter} = props;
@@ -8,6 +9,7 @@ const CharacterList = (props) => {
       {characters
       .filter(characterElement => !searchCharacter || characterElement.name.toLowerCase().includes(searchCharacter.toLowerCase()))
       .map(characterElement =>
+        <Link key={characterElement.id} to={`character/${characterElement.id}`}>
         <li key = {characterElement.id}>
           <Character 
               characterImg = {characterElement.image}
@@ -15,6 +17,7 @@ const CharacterList = (props) => {
               characterSpecies = {characterElement.species}
           />
           </li>
+          </Link>
         )}
     </ul>
   )
