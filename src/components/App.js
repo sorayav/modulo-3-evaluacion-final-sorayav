@@ -5,6 +5,7 @@ import fetchCharacters from '../services/FetchData';
 import CharacterList from './CharacterList';
 import FilterSearch from './FilterSearch';
 import CharacterDetails from './CharacterDetails';
+import Loader from './Loader';
 
 class App extends React.Component {
   constructor(props) {
@@ -51,13 +52,14 @@ class App extends React.Component {
           <Route exact path="/">
             <header className="header">
               <h1>Rick and Morty characters</h1>
+              
               <div className="filters">
                 <FilterSearch handleSearchCharacter={this.handleSearchCharacter} searchCharacter={searchCharacter} /> 
               </div>
             </header>
 
             <main>
-              {!data ? "Loading characters" : 
+              {!data ? <Loader /> : 
               <CharacterList characters={data} searchCharacter={searchCharacter} />
               }
             </main>
