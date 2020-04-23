@@ -7,6 +7,7 @@ import FilterSearch from './FilterSearch';
 import CharacterDetails from './CharacterDetails';
 import Loader from './Loader';
 import logo from '../images/logo.png';
+import NotFound from './NotFound';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends React.Component {
     this.state = {
       data: [],
       searchCharacter: '',
+      itExists: true,
     }
   }
 
@@ -34,6 +36,14 @@ class App extends React.Component {
     })
   }
 
+  // handleCharacterNotFound(value){
+  //   const characters = this.state.data;
+  //   let exists = false;
+  //   for (let character of characters) {
+  //     if (character.id)
+  //   }
+  // }
+
   renderCharacterDetails(props) {
     const urlId = props.match.params.id;
     const characters = this.state.data;
@@ -41,7 +51,7 @@ class App extends React.Component {
       if (character.id === parseInt(urlId)) {
         return <CharacterDetails character={character} />
       }
-    }
+    } return <NotFound />
   }
 
   render() {
