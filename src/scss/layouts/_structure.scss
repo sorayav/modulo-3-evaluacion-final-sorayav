@@ -25,14 +25,4 @@ html {
   h2 {
     font-weight: bold;
   }
-
-  input[type=text] {
-    border: 1px solid black;
-    margin-left: 10px;
-
-    &:focus {
-      background-color: cyan;
-    }
-  }
-
 }
