@@ -8,8 +8,10 @@ const FilterSearch = (props) => {
     props.handleSearchCharacter(value);
   }
 
+  const preventDefault = (ev) => ev.preventDefault();
+
   return (
-    <form className="filter__search">
+    <form className="filter__search" onSubmit={preventDefault}>
       <label htmlFor="search-character">Search a character:</label>
       <input onChange={handleSearchCharacter} type="text" id="search-character" name="search-character" value={props.searchCharacter} />
     </form>
