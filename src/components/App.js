@@ -6,6 +6,7 @@ import CharacterList from './CharacterList';
 import FilterSearch from './FilterSearch';
 import CharacterDetails from './CharacterDetails';
 import Loader from './Loader';
+import logo from '../images/logo.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -50,8 +51,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/">
             <header className="header">
-              <h1>Rick and Morty characters</h1>
-              
+              {/* <h1>Rick and Morty characters</h1> */}
+              <div className="logo"><img src={logo} alt="Rick and Morty logo"/></div>
               <div className="filters">
                 <FilterSearch handleSearchCharacter={this.handleSearchCharacter} searchCharacter={searchCharacter} /> 
               </div>

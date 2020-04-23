@@ -1,11 +1,14 @@
 html {
   // width: 100vw;
   height: 100vh;
-  background: url('../../images/background.jpg') no-repeat;
+  background: url('../../images/background2.jpg') repeat;
   // background-size: cover;
-  background-position: center;
+  background-position-x: -45vw;
+  background-position-y: top;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   a {
     cursor: url('../../images/cursor.png'), auto;
+    color: black;
   }
 }
 
