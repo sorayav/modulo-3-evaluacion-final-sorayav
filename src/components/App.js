@@ -67,7 +67,7 @@ class App extends React.Component {
 
             <Route path="/character/:id" render={this.renderCharacterDetails} />
         </Switch>
-        <footer className="footer">Rick and Morty</footer>
+        <footer className="footer">'Rick and Morty' characters app created with React. Repository. </footer>
       </div>
     );
   }

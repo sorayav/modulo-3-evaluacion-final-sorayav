@@ -33,15 +33,17 @@ main {
       border-radius: 20px;
       // scrollbar-color: yellow white;
       font-size: 25px;
+      color: rgba(0, 0, 0, 0.7);
       position: relative;
       box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.4);
+      text-shadow: 0.5px 0 0 #ea36af, -1px 0 0 #75fa69;
 
       .character__image {
         border-radius: 100%;
         height: 200px;
         position: absolute;
         z-index: 1;
-        animation: moving-pics 3s infinite ease-in-out;
+        animation: moving-pics 2s infinite ease-in-out;
         
         @keyframes moving-pics {
           0% {
