@@ -57,16 +57,16 @@ class App extends React.Component {
               </div>
             </header>
 
-            <main>
+            <main className="main">
               {!data ? <Loader /> : 
               <CharacterList characters={data} searchCharacter={searchCharacter} />
               }
             </main>
             </Route>
-            <section className="details">
-              <Route path="/character/:id" render={this.renderCharacterDetails} />
-            </section>
+
+            <Route path="/character/:id" render={this.renderCharacterDetails} />
         </Switch>
+        <footer className="footer">Rick and Morty</footer>
       </div>
     );
   }

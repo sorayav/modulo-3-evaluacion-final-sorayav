@@ -1,0 +1,16 @@
+html {
+  cursor: url('../../images/cursor.png'), auto;
+}
+
+.App {
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type=text] {
+  border: 1px solid black;
+}
