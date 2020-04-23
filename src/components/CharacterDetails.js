@@ -1,4 +1,5 @@
 import React from 'react';
+import icon from '../images/backhome.png';
 import { Link } from 'react-router-dom';
 
 const CharacterDetails = (props) => {
@@ -6,7 +7,7 @@ const CharacterDetails = (props) => {
   const episodesNumber = episodesTotal.length;
   return (
     <section className="details">
-      <Link to="/" className="character__details--btn"> ≤ Home</Link>
+      <Link to="/" className="character__details--btn"><img className="home__icon" src={icon} alt="Go back" /> Go back</Link>
       <div className="character__details">
         
         <div className="character__details-img">
