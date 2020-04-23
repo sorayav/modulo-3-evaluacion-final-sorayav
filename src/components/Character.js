@@ -7,9 +7,10 @@ function Character (props) {
         <img src={props.characterImg} alt={props.characterName} />
       </div>
       
-      <h2 className="character__name">{props.characterName}</h2>
-
-      <p className="character__species">Species: {props.characterSpecies}</p>
+      <div className="character__info">
+        <h2 className="character__name">{props.characterName}</h2>
+        <p className="character__species">Species: {props.characterSpecies}</p>
+      </div>
     </div>
   )
 }

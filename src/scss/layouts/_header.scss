@@ -1,0 +1,56 @@
+header {
+  width: 100vw;
+  height: 10vh;
+  margin: auto;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+
+  h1 {
+   display: none;
+  }
+  .logo {
+    width: 300px;
+    position: absolute;
+    left: 25px;
+    top: 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .filters {
+    font-size: 18px;
+    color: rgb(228, 228, 228);
+    animation-duration: 0.02s;
+    animation-name: text-distortion;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes text-distortion {
+    from {
+      text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+    }
+    to {
+      text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+    }
+  }
+
+  label {
+    font-size: 20px;
+  }
+
+  input[type=text] {
+    border: 1px solid black;
+    margin-left: 10px;
+
+    &:focus {
+      background-color: cyan;
+    }
+  }
+}

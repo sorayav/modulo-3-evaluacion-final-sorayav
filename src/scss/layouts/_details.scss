@@ -1,0 +1,79 @@
+.details {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+
+  a {
+    color: white;
+  }
+
+  h3 {
+    display: inline;
+    font-weight: bold;
+  }
+  .character__details--btn { // revisar
+    width: 100px;
+    background-color: rgb(251, 0, 180);
+    border-radius: 100%;
+    top: 10px;
+    position: absolute;
+
+    @include forDesktop {
+    position: absolute;
+    top: 80px;
+    }
+    .home__icon {
+      width: 40px;
+    }
+  }
+
+  .character__details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      text-transform: none;
+
+      .character__details--info {
+        margin: 10px 0;
+        text-align: center;
+        line-height: 1.5;
+        text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+        letter-spacing: 0.125em;
+        animation-duration: 0.02s;
+        animation-name: text-distortion;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      .character__details--name {
+        font-size: 20px;
+        border-left: 3px solid rgb(251, 0, 180);
+        border-right: 3px solid rgb(106, 255, 8);
+        padding: 0 10px;
+
+        &::first-letter {
+          color: yellow;
+          font-size: 23px;
+        }
+
+        @keyframes text-distortion {
+          from {
+            text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+          }
+          to {
+            text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+          }
+        }
+      }
+      .character__details--ul {
+        :nth-child(even) {
+          text-transform: capitalize;
+        }
+      }
+  }
+}

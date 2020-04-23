@@ -6,6 +6,8 @@ import CharacterList from './CharacterList';
 import FilterSearch from './FilterSearch';
 import CharacterDetails from './CharacterDetails';
 import Loader from './Loader';
+import logo from '../images/logo.png';
+import NotFound from './NotFound';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,6 +17,7 @@ class App extends React.Component {
     this.state = {
       data: [],
       searchCharacter: '',
+      itExists: true,
     }
   }
 
@@ -33,6 +36,14 @@ class App extends React.Component {
     })
   }
 
+  // handleCharacterNotFound(value){
+  //   const characters = this.state.data;
+  //   let exists = false;
+  //   for (let character of characters) {
+  //     if (character.id)
+  //   }
+  // }
+
   renderCharacterDetails(props) {
     const urlId = props.match.params.id;
     const characters = this.state.data;
@@ -40,7 +51,7 @@ class App extends React.Component {
       if (character.id === parseInt(urlId)) {
         return <CharacterDetails character={character} />
       }
-    }
+    } return <NotFound />
   }
 
   render() {
@@ -51,22 +62,22 @@ class App extends React.Component {
           <Route exact path="/">
             <header className="header">
               <h1>Rick and Morty characters</h1>
-              
+              <a href="/" className="logo"><img src={logo} alt="Rick and Morty logo"/></a>
               <div className="filters">
                 <FilterSearch handleSearchCharacter={this.handleSearchCharacter} searchCharacter={searchCharacter} /> 
               </div>
             </header>
 
-            <main>
+            <main className="main">
               {!data ? <Loader /> : 
               <CharacterList characters={data} searchCharacter={searchCharacter} />
               }
             </main>
             </Route>
-            <section className="details">
-              <Route path="/character/:id" render={this.renderCharacterDetails} />
-            </section>
+
+            <Route path="/character/:id" render={this.renderCharacterDetails} />
         </Switch>
+        <footer className="footer">'Rick and Morty' characters app created with React. Repository. </footer>
       </div>
     );
   }
