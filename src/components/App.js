@@ -52,7 +52,7 @@ class App extends React.Component {
           <Route exact path="/">
             <header className="header">
               <h1>Rick and Morty characters</h1>
-              <div className="logo"><img src={logo} alt="Rick and Morty logo"/></div>
+              <a href="/" className="logo"><img src={logo} alt="Rick and Morty logo"/></a>
               <div className="filters">
                 <FilterSearch handleSearchCharacter={this.handleSearchCharacter} searchCharacter={searchCharacter} /> 
               </div>
