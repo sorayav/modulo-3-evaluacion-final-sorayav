@@ -15,7 +15,6 @@ class App extends React.Component {
     this.state = {
       data: [],
       searchCharacter: '',
-      loading: true
     }
   }
 
@@ -45,7 +44,7 @@ class App extends React.Component {
   }
 
   render() {
-    const {data, searchCharacter, loading} = this.state;
+    const {data, searchCharacter} = this.state;
     return (
       <div className="App">
         <Switch>

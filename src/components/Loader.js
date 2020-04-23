@@ -1,9 +1,10 @@
 import React from 'react';
+import loader from '../images/portal.gif';
 
 const Loader = () => {
-  return ( <div className="Loader">
-      <img src="../../public/portal.gif" alt="Loader" />
-      Loading characters!
+  return ( <div className="loader">
+      <img src={loader} alt="Loader" />
+      Loading characters...
     </div>
   )
 }

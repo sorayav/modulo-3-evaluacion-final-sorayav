@@ -1,0 +1,15 @@
+.loader {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 80%;
+
+    @include forTablet {
+      width: 500px;
+    }
+  }
+}
