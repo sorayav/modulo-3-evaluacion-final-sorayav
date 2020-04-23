@@ -23,6 +23,7 @@
       align-items: center;
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.8);
+      text-transform: none;
 
       .character__details--info {
         margin: 10px 0;
@@ -53,6 +54,11 @@
           to {
             text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
           }
+        }
+      }
+      .character__details--ul {
+        :nth-child(even) {
+          text-transform: capitalize;
         }
       }
   }
