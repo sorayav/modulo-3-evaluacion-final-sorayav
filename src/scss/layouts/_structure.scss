@@ -34,4 +34,7 @@ html {
   &.human {
     filter: drop-shadow(0px 1px 1px #75fa69);
   }
+  &.dead {
+    filter: drop-shadow(0px 1px 1px #ff1717);
+  }
 }

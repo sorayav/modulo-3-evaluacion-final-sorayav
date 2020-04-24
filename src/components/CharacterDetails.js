@@ -2,12 +2,13 @@ import React from 'react';
 import icon from '../images/backhome.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPastafarianism, faRestroom } from '@fortawesome/free-solid-svg-icons';
+import { faPastafarianism, faRestroom, faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
 
 const CharacterDetails = (props) => {
   const {image, name, species, origin, episode, status} = props.character;
 
   const Species = species === 'Human' ? <FontAwesomeIcon icon={faRestroom} className="icon human" /> : <FontAwesomeIcon icon={faPastafarianism} className="icon" />;
+  const Dead = status === 'Dead' ? <FontAwesomeIcon icon={faSkullCrossbones} className="icon dead"/> : '';
 
   return (
     <section className="details">
@@ -24,7 +25,7 @@ const CharacterDetails = (props) => {
             <li className="character__details--species"><h3>Species:</h3> {species} {Species}</li>
             <li className="character__details--origin"><h3>Origin:</h3> {origin.name}</li>
             <li className="character__details--episode"><h3>Number of episodes:</h3> {episode.length}</li>
-            <li className="character__details--status"><h3>Status:</h3> {status}</li>
+            <li className="character__details--status"><h3>Status:</h3> {status} {Dead}</li>
           </ul>
         </div>
       </div>
