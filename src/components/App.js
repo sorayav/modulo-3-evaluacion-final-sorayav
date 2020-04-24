@@ -14,9 +14,11 @@ class App extends React.Component {
     super(props);
     this.handleSearchCharacter = this.handleSearchCharacter.bind(this);
     this.renderCharacterDetails = this.renderCharacterDetails.bind(this);
+    // this.sortCharacters = this.sortCharacters.bind(this);
     this.state = {
       data: [],
       searchCharacter: '',
+      isChecked: false,
       itExists: true,
     }
   }
@@ -36,12 +38,10 @@ class App extends React.Component {
     })
   }
 
-  // handleCharacterNotFound(value){
-  //   const characters = this.state.data;
-  //   let exists = false;
-  //   for (let character of characters) {
-  //     if (character.id)
-  //   }
+  // sortCharacters(value) {
+  //   this.setState({
+  //     data: data.sort()
+  //   })
   // }
 
   renderCharacterDetails(props) {

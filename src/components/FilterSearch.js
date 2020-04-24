@@ -1,6 +1,7 @@
 import React from 'react';
 
 const FilterSearch = (props) => {
+  const preventDefault = (ev) => ev.preventDefault();
 
   const handleSearchCharacter = (ev) => {
     ev.preventDefault();
@@ -8,12 +9,17 @@ const FilterSearch = (props) => {
     props.handleSearchCharacter(value);
   }
 
-  const preventDefault = (ev) => ev.preventDefault();
+//  const sortCharacters = (ev) => {
+//    props.sortCharacters(ev.currentTarget.value);
+//  }
 
   return (
     <form className="filter__search" onSubmit={preventDefault}>
       <label htmlFor="search-character">Search a character:</label>
       <input onChange={handleSearchCharacter} type="text" id="search-character" name="search-character" value={props.searchCharacter} />
+
+      {/* <label htmlFor="sort">Sort alphabetically: </label>
+      <input onChange={sortCharacters} type="checkbox" id="sort" name="sort" value={props.characters} checked={props.characters.sort() ? true : false} /> */}
     </form>
   )
 }
