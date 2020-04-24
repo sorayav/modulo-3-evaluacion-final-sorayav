@@ -14,7 +14,6 @@ const CharacterDetails = (props) => {
     <section className="details">
       <Link to="/" className="character__details--btn" title="Go back"><img className="home__icon" src={icon} alt="Go back" /> Go back</Link>
       <div className="character__details">
-        
         <div className="character__details-img">
           <img src={image} alt={name} />
         </div>
