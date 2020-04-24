@@ -30,6 +30,18 @@ header {
     animation-name: text-distortion;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+
+    .filter__search {
+      display: flex;
+      align-items: center;
+    
+      .reset__btn {
+        background-color: transparent;
+        text-shadow: 0.5px 0 0 #ea36af, -1px 0 0 #75fa69;
+        color: white;
+        font-size: 16px;
+      }
+    }
   }
 
   @keyframes text-distortion {

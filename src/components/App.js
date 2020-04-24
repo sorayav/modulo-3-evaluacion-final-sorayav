@@ -14,6 +14,7 @@ class App extends React.Component {
     super(props);
     this.handleSearchCharacter = this.handleSearchCharacter.bind(this);
     this.renderCharacterDetails = this.renderCharacterDetails.bind(this);
+    this.resetInput = this.resetInput.bind(this);
     // this.sortCharacters = this.sortCharacters.bind(this);
     this.state = {
       data: [],
@@ -44,6 +45,12 @@ class App extends React.Component {
   //   })
   // }
 
+  resetInput() {
+    this.setState({
+      searchCharacter: ''
+    })
+  }
+
   renderCharacterDetails(props) {
     const urlId = props.match.params.id;
     const characters = this.state.data;
@@ -64,7 +71,7 @@ class App extends React.Component {
               <h1>Rick and Morty characters</h1>
               <a href="/" className="logo"><img src={logo} alt="Rick and Morty logo"/></a>
               <div className="filters">
-                <FilterSearch handleSearchCharacter={this.handleSearchCharacter} searchCharacter={searchCharacter} /> 
+                <FilterSearch handleSearchCharacter={this.handleSearchCharacter} searchCharacter={searchCharacter} resetInput={this.resetInput}/> 
               </div>
             </header>
 

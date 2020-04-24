@@ -5,7 +5,7 @@ import ItExists from './ItExists'
 
 const CharacterList = (props) => {
   const {characters, searchCharacter} = props;
-  const doesItExist = characters.filter(characterElement => !searchCharacter || characterElement.name.toLowerCase().includes(searchCharacter.toLowerCase()))
+  const doesItExist = characters.filter(characterElement => !searchCharacter || characterElement.name.toLowerCase().includes(searchCharacter.toLowerCase()));
   
   if (doesItExist.length === 0) {
     return <ItExists />
