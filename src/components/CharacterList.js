@@ -1,7 +1,7 @@
 import React from 'react';
 import Character from './Character';
 import { Link } from 'react-router-dom';
-import ItDoesntExist from './ItDoesntExist'
+import ItDoesntExist from './ItDoesntExist';
 
 const CharacterList = (props) => {
   const {characters, searchCharacter} = props;
