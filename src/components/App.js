@@ -8,7 +8,6 @@ import CharacterDetails from './CharacterDetails';
 import Loader from './Loader';
 import logo from '../images/logo.png';
 import NotFound from './NotFound';
-import PaginationSort from './SortAlphabetically';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,7 +18,6 @@ class App extends React.Component {
     this.state = {
       data: [],
       searchCharacter: '',
-      isChecked: false,
     }
   }
 
