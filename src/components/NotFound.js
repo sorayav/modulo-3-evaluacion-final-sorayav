@@ -5,8 +5,8 @@ const NotFound = () => {
   return (
     <div className="character__notfound">
       <h2>There's nothing here.</h2>
-    <p>Searching is pain, you better <a href="/" title="Go home, you're drunk">go back</a> and try again.</p>
-    <img src={notFound} alt="Not found" />
+      <p>Searching is pain, you better <a href="/" title="Go home, you're drunk">go back</a> and try again.</p>
+      <img src={notFound} alt="Not found" />
     </div>
   )
 }
