@@ -13,7 +13,7 @@ const CharacterList = (props) => {
     return ( <div> 
       <ul className="character__list">
         {doesItExist
-        // .sort(characterElement => characterElement.name)
+        .sort((a, b) => a.name.localeCompare(b.name))
         .map(characterElement =>
           <Link key={characterElement.id} to={`character/${characterElement.id}`} title="Click for more info">
           <li key = {characterElement.id}>
