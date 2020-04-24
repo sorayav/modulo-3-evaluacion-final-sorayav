@@ -9,8 +9,8 @@ const FilterSearch = (props) => {
     props.handleSearchCharacter(value);
   }
 
-//  const sortCharacters = (ev) => {
-//    props.sortCharacters(ev.currentTarget.value);
+//  const sortCharacters = (characters) => {
+//    const sort = characters.sort((a, b) => a.name.localeCompare(b.name))
 //  }
 
   return (
@@ -19,7 +19,7 @@ const FilterSearch = (props) => {
       <input onChange={handleSearchCharacter} type="text" id="search-character" name="search-character" value={props.searchCharacter} />
       <button onClick={props.resetInput} type="button" className="reset__btn">Clear</button>
       {/* <label htmlFor="sort">Sort alphabetically: </label>
-      <input onChange={sortCharacters} type="checkbox" id="sort" name="sort" value={props.characters} checked={props.characters.sort() ? true : false} /> */}
+      <input onChange={sortCharacters} type="checkbox" id="sort" name="sort" value={props.characters} checked={props.isChecked} /> */}
     </form>
   )
 }

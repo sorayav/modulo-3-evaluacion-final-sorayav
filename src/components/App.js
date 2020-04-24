@@ -8,6 +8,7 @@ import CharacterDetails from './CharacterDetails';
 import Loader from './Loader';
 import logo from '../images/logo.png';
 import NotFound from './NotFound';
+import PaginationSort from './SortAlphabetically';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,12 +16,10 @@ class App extends React.Component {
     this.handleSearchCharacter = this.handleSearchCharacter.bind(this);
     this.renderCharacterDetails = this.renderCharacterDetails.bind(this);
     this.resetInput = this.resetInput.bind(this);
-    // this.sortCharacters = this.sortCharacters.bind(this);
     this.state = {
       data: [],
       searchCharacter: '',
       isChecked: false,
-      itExists: true,
     }
   }
 
@@ -28,9 +27,9 @@ class App extends React.Component {
     fetchCharacters()
     .then(data => {
       this.setState({
-        data: data.results
+        data: data.results,
       })
-    })
+    });
   }
 
   handleSearchCharacter(value) {
@@ -39,10 +38,15 @@ class App extends React.Component {
     })
   }
 
-  // sortCharacters(value) {
+  // sortCharacters() {
+  //   if (isChecked === true) {
   //   this.setState({
-  //     data: data.sort()
-  //   })
+  //     data: data.sort((a, b) => a.name.localeCompare(b.name))
+  //   })} else if (isChecked === false) {
+  //     this.setState({
+  //       data: []
+  //     })
+  //   }
   // }
 
   resetInput() {
@@ -63,6 +67,7 @@ class App extends React.Component {
 
   render() {
     const {data, searchCharacter} = this.state;
+
     return (
       <div className="App">
         <Switch>
@@ -71,7 +76,7 @@ class App extends React.Component {
               <h1>Rick and Morty characters</h1>
               <a href="/" className="logo"><img src={logo} alt="Rick and Morty logo"/></a>
               <div className="filters">
-                <FilterSearch handleSearchCharacter={this.handleSearchCharacter} searchCharacter={searchCharacter} resetInput={this.resetInput}/> 
+                <FilterSearch handleSearchCharacter={this.handleSearchCharacter} searchCharacter={searchCharacter} resetInput={this.resetInput} /> 
               </div>
             </header>
 
@@ -79,6 +84,7 @@ class App extends React.Component {
               {!data ? <Loader /> : 
               <CharacterList characters={data} searchCharacter={searchCharacter} />
               }
+              
             </main>
             </Route>
 
