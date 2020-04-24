@@ -6,9 +6,6 @@ import ItDoesntExist from './ItDoesntExist';
 const CharacterList = (props) => {
   const {characters, searchCharacter} = props;
   const doesItExist = characters.filter(characterElement => !searchCharacter || characterElement.name.toLowerCase().includes(searchCharacter.toLowerCase()));
-  // const sortByNameFunction = doesItExist.sort((a, b) => a.name.localeCompare(b.name));
-  // const sortByName = <button onClick={sortByNameFunction}></button>
-  // const sortByName = characters.sort((a, b) => a.name.localeCompare(b.name))
   
   if (doesItExist.length === 0) {
     return <ItDoesntExist />
