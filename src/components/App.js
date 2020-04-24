@@ -38,17 +38,6 @@ class App extends React.Component {
     })
   }
 
-  // sortCharacters() {
-  //   if (isChecked === true) {
-  //   this.setState({
-  //     data: data.sort((a, b) => a.name.localeCompare(b.name))
-  //   })} else if (isChecked === false) {
-  //     this.setState({
-  //       data: []
-  //     })
-  //   }
-  // }
-
   resetInput() {
     this.setState({
       searchCharacter: ''
