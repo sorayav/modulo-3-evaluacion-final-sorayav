@@ -1,14 +1,16 @@
 import React from 'react';
 import Character from './Character';
 import { Link } from 'react-router-dom';
-import ItExists from './ItExists'
+import ItDoesntExist from './ItDoesntExist'
 
 const CharacterList = (props) => {
   const {characters, searchCharacter} = props;
   const doesItExist = characters.filter(characterElement => !searchCharacter || characterElement.name.toLowerCase().includes(searchCharacter.toLowerCase()));
+  // const sortByNameFunction = doesItExist.sort((a, b) => a.name.localeCompare(b.name));
+  // const sortByName = <button onClick={sortByNameFunction}></button>
   
   if (doesItExist.length === 0) {
-    return <ItExists />
+    return <ItDoesntExist />
   } else {
     return ( <div> 
       <ul className="character__list">

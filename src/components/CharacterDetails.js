@@ -7,7 +7,7 @@ const CharacterDetails = (props) => {
   const episodesNumber = episodesTotal.length;
   return (
     <section className="details">
-      <Link to="/" className="character__details--btn"><img className="home__icon" src={icon} alt="Go back" /> Go back</Link>
+      <Link to="/" className="character__details--btn" title="Go back"><img className="home__icon" src={icon} alt="Go back" /> Go back</Link>
       <div className="character__details">
         
         <div className="character__details-img">

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ItExists = () => {
+const ItDoesntExist = () => {
   return (
     <div className="character__exists">
       <h2>That character is not in this universe.</h2>
@@ -9,4 +9,4 @@ const ItExists = () => {
   )
 }
 
-export default ItExists;
+export default ItDoesntExist;
