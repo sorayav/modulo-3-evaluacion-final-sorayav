@@ -18,13 +18,15 @@ const FilterSearch = (props) => {
   // }
 
   return (
-    <form className="filter__search" onSubmit={preventDefault}>
-      <label htmlFor="search-character">Search a character:</label>
-      <input onChange={handleSearchCharacter} type="text" id="search-character" name="search-character" value={props.searchCharacter} />
-      <button onClick={props.resetInput} type="button" className="reset__btn">Clear</button>
-
-      <label htmlFor="sort">Sort alphabetically: </label>
-      <input onChange={handleSort} type="checkbox" id="sort" name="sort" value="sort" checked={props.sortCharacter} checked={props.sortChecked}/>
+    <form className="filters__box" onSubmit={preventDefault}>
+      <div className="filters__box1">
+        <label htmlFor="search-character">Search a character:</label>
+        <input onChange={handleSearchCharacter} type="text" id="search-character" name="search-character" value={props.searchCharacter} />
+        <button onClick={props.resetInput} type="button" className="reset__btn">Clear</button>
+      </div>
+      <div className="filters__box2">
+        <label htmlFor="sort">Sort alphabetically: </label>
+        <input onChange={handleSort} type="checkbox" id="sort" name="sort" value="sort" checked={props.sortCharacter} checked={props.sortChecked}/>
 
       {/* <label htmlFor="filter-specie">Filter by specie:</label>
         <select id="filter-specie" name="filter-specie" value={props.characterSpecies} onChange={handleSpecie}>
@@ -32,6 +34,7 @@ const FilterSearch = (props) => {
           <option value="Human">Human</option>
           <option value="Alien">Alien</option>
       </select> */}
+      </div>
     </form>
   )
 }
