@@ -3,7 +3,7 @@
 El ejercicio consiste en desarrollar una página web con un listado de personajes de *Rick and Morty*, que podemos filtrar por el nombre del personaje y de cuyo personaje obtendremos una página dedicada con su información. Esta aplicación es responsive y ha sido desarrollada con React, HTML5 y CSS3 (SASS).
 
 ## Cómo usarla
-Puedes acceder a ella a través del enlace de Github Pages, o de forma local:
+Puedes acceder a ella a través del [enlace de Github Pages](http://beta.adalab.es/modulo-3-evaluacion-final-sorayav), o de forma local:
 
 1. Descarga o clona el repositorio:
 `git clone https://github.com/Adalab/modulo-3-evaluacion-final-sorayav.git`
