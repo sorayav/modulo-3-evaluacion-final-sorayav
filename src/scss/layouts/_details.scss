@@ -1,0 +1,89 @@
+.details {
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  color: black;
+
+  @include forTablet {
+    height: 96.9vh;
+  }
+
+  a {
+    color: white;
+  }
+
+  h3 {
+    display: inline;
+    font-weight: bold;
+  }
+  .character__details--btn {
+    width: 115px;
+    background-color: $mainPink;
+    border-radius: 100%;
+    padding: 3px;
+    margin-bottom: 15px;
+    
+    .home__icon {
+      width: 40px;
+    }
+  }
+
+  .character__details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      text-transform: none;
+
+      @include forMobile {
+        max-width: 300px;
+      }
+
+      img {
+        @include forMobile {
+          max-width: 250px;
+        }
+      }
+
+      .character__details--info {
+        margin: 10px 0;
+        text-align: center;
+        line-height: 1.5;
+        text-shadow: 0.06rem 0 0.06rem $mainPink, -0.125rem 0 0.06rem $mainGreen;
+        letter-spacing: 0.125em;
+        animation-duration: 0.02s;
+        animation-name: text-distortion;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      .character__details--name {
+        font-size: 20px;
+        border-left: 3px solid $mainPink;
+        border-right: 3px solid $mainGreen;
+        padding: 0 10px;
+
+        &::first-letter {
+          color: yellow;
+          font-size: 23px;
+        }
+
+        @keyframes text-distortion {
+          from {
+            text-shadow: 1px 0 0 $mainPink, -2px 0 0 $mainGreen;
+          }
+          to {
+            text-shadow: 2px 0.5px 2px $mainPink, -1px -0.5px 2px $mainGreen;
+          }
+        }
+      }
+      .character__details--ul {
+        :nth-child(even) {
+          text-transform: capitalize;
+        }
+      }
+  }
+}

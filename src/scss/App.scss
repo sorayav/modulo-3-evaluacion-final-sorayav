@@ -1,5 +1,10 @@
 @import 'core/variables';
 @import 'base/reset';
 @import 'core/mixins';
-// @import 'layouts/structure';
+@import 'layouts/structure';
+@import 'layouts/header';
+@import 'layouts/loader';
 @import 'layouts/main';
+@import 'layouts/details';
+@import 'layouts/notfound';
+@import 'layouts/footer';

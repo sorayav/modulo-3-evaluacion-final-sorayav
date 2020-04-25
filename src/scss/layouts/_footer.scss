@@ -1,0 +1,34 @@
+footer {
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+
+  @include forTablet {
+    font-size: 16px;
+    position: fixed;
+    z-index: 1;
+    bottom: 12px;
+  }
+  
+  a {
+    color: white;
+  }
+
+  .footer__socialmedia {
+    margin-left: 10px;
+    
+    .icon__social {
+      padding: 0 2px;
+
+      &:hover {
+        filter: drop-shadow(3px 1px 4px $mainPink);
+      }
+    }
+  }
+}
