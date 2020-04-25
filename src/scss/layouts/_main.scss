@@ -1,9 +1,10 @@
 main {
   width: 100vw;
   height: 80vh;
-  overflow-y: scroll;
+  overflow: scroll;
   margin: 10px 0;
   position: relative;
+  scroll-behavior: smooth;
 
   @include forDesktop {
     width: 80vw;
@@ -27,6 +28,7 @@ main {
     margin-inline-end: 0px;
     padding-inline-start: 0px;
   }
+
   .character__list {
     height: auto;
     display: flex;
@@ -87,6 +89,7 @@ main {
           }
         }
       }
+      
       .character__info {
         border-radius: 10px;
         background-color: white;

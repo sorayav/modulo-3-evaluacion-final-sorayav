@@ -13,19 +13,15 @@ const Filters = (props) => {
   const handleSort = () => {
     props.handleSortCharacters();
   }
-
-  // const handleSpecie = (ev) => {
-  //   let valueSpecie = ev.target.value;
-  //   props.handleSpecie(valueSpecie);
-  // }
-
+  
   return (
     <form className="filters__box" onSubmit={preventDefault}>
       <div className="filters__box1">
         <label htmlFor="search-character">Search a character:</label>
         <input 
           onChange={handleSearchCharacter} 
-          type="text" id="search-character" 
+          type="text" 
+          id="search-character" 
           name="search-character" 
           value={searchCharacter} 
           />
@@ -46,13 +42,6 @@ const Filters = (props) => {
           checked={sortCharacter} 
           defaultChecked={isSortChecked}
           />
-
-      {/* <label htmlFor="filter-specie">Filter by specie:</label>
-        <select id="filter-specie" name="filter-specie" value={props.characterSpecies} onChange={handleSpecie}>
-          <option value="">All</option>
-          <option value={"Human"}>Human</option>
-          <option value="Alien">Alien</option>
-      </select> */}
       </div>
     </form>
   )

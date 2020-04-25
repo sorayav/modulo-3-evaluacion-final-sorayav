@@ -4,6 +4,7 @@ html {
   background-position-x: -45vw;
   background-position-y: top;
   font-family: $mainFont;
+  scroll-behavior: smooth;
 
     @include forMobile {
       background-position: center;

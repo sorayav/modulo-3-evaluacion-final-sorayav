@@ -17,22 +17,18 @@ class App extends React.Component {
     this.renderCharacterDetails = this.renderCharacterDetails.bind(this);
     this.resetInput = this.resetInput.bind(this);
     this.handleSortCharacters = this.handleSortCharacters.bind(this);
-    this.handleSpecie = this.handleSpecie.bind(this);
     this.state = {
       data: [],
       searchCharacter: '',
       sortCharacters: false,
       isSortChecked: false,
-      specie: '',
     }
   }
 
   componentDidMount() {
     fetchCharacters()
     .then(data => {
-      this.setState({
-        data: data.results
-      })
+      this.setState({ data: data.results })
     });
   }
 
@@ -54,16 +50,8 @@ class App extends React.Component {
     }
   }
 
-  handleSpecie(valueSpecie) {
-    this.setState({
-      specie: valueSpecie
-    })
-  }
-
   resetInput() {
-    this.setState({
-      searchCharacter: ''
-    })
+    this.setState({ searchCharacter: '' })
   }
 
   renderCharacterDetails(props) {
@@ -77,8 +65,7 @@ class App extends React.Component {
   }
 
   render() {
-    const {data, searchCharacter, sortCharacters, isSortChecked, specie} = this.state;
-    // console.log(this.state.specie)
+    const {data, searchCharacter, sortCharacters, isSortChecked} = this.state;
 
     return (
       <div className="App">
@@ -95,8 +82,6 @@ class App extends React.Component {
                   handleSortCharacters={this.handleSortCharacters} 
                   sortCharacters={sortCharacters}
                   isSortChecked={isSortChecked}
-                  // characterSpecies={specie} 
-                  // handleSpecie={this.handleSpecie} 
                   /> 
               </div>
             </header>
