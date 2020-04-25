@@ -1,11 +1,15 @@
 footer {
-  height: 5vh;
+  height: 100%;
   width: 100vw;
-  position: absolute;
-  bottom: 0;
+  position: relative;
   text-align: center;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  // background-color: tr;
+  color: white;
+  padding: 5px 0;
+  a {
+    color: white;
+  }
 }

@@ -2,10 +2,14 @@ html {
   // width: 100vw;
   height: 100vh;
   background: url('../../images/background2.jpg') repeat;
-  // background-size: cover;
   background-position-x: -45vw;
   background-position-y: top;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    @include forMobile {
+      background-position: center;
+    }
+
   a {
     cursor: url('../../images/cursor.png'), auto;
     color: black;

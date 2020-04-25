@@ -8,6 +8,7 @@ import CharacterDetails from './CharacterDetails';
 import Loader from './Loader';
 import logo from '../images/logo.png';
 import NotFound from './NotFound';
+import Footer from './Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -65,7 +66,6 @@ class App extends React.Component {
     })
   }
 
-
   renderCharacterDetails(props) {
     const urlId = props.match.params.id;
     const characters = this.state.data;
@@ -113,7 +113,7 @@ class App extends React.Component {
 
             <Route path="/character/:id" render={this.renderCharacterDetails} />
         </Switch>
-        <footer className="footer">'Rick and Morty' characters app created with React. Repository. </footer>
+        <Footer />
       </div>
     );
   }

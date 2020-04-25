@@ -1,15 +1,18 @@
 main {
-  width: 90vw;
-  height: 85vh;
+  width: 100vw;
+  height: 80vh;
   overflow-y: scroll;
   margin: 10px 0;
+  position: relative;
 
   @include forDesktop {
-    width: 85vw;
+    width: 80vw;
+    height: 85vh;
   }
 
   &::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
     background-color: transparent;
   }
 
@@ -36,7 +39,7 @@ main {
       flex-direction: column;
       align-items: center;
       flex-wrap: wrap;
-      width: 300px;
+      width: 250px;
       height: 300px;
       background-color: transparent;
       margin: 10px 50px;
@@ -46,6 +49,10 @@ main {
       position: relative;
       box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.4);
       text-shadow: 0.5px 0 0 #ea36af, -1px 0 0 #75fa69;
+
+      @include forDesktop {
+        width: 300px;
+      }
 
       .character__image {
         border-radius: 100%;
@@ -83,7 +90,7 @@ main {
       .character__info {
         border-radius: 10px;
         background-color: white;
-        width: 300px;
+        width: 250px;
         height: 100px;
         position: absolute;
         bottom: 0px;
@@ -92,10 +99,15 @@ main {
         justify-content: center;
         align-items: center;
 
+        @include forDesktop {
+          width: 300px;
+        }
+
         .character__name {
           font-size: 25px;
-          margin-bottom: 4px;
+          margin: 0 1px 4px 0;
           color: transparent;
+          text-align: center;
         }
       }
     }
