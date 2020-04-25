@@ -44,13 +44,13 @@ const Filters = (props) => {
           name="sort" 
           value="sort" 
           checked={sortCharacter} 
-          checked={isSortChecked}
+          defaultChecked={isSortChecked}
           />
 
       {/* <label htmlFor="filter-specie">Filter by specie:</label>
         <select id="filter-specie" name="filter-specie" value={props.characterSpecies} onChange={handleSpecie}>
           <option value="">All</option>
-          <option value="Human">Human</option>
+          <option value={"Human"}>Human</option>
           <option value="Alien">Alien</option>
       </select> */}
       </div>

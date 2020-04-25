@@ -5,7 +5,7 @@ import { faPastafarianism, faRestroom } from '@fortawesome/free-solid-svg-icons'
 function Character (props) {
   const {characterImg, characterName, characterSpecies} = props;
 
-  const Species = characterSpecies === 'Human' ? <FontAwesomeIcon icon={faRestroom} className="icon human"/> : <FontAwesomeIcon icon={faPastafarianism} className="icon"/>;
+  const speciesIcon = characterSpecies === 'Human' ? <FontAwesomeIcon icon={faRestroom} className="icon human"/> : <FontAwesomeIcon icon={faPastafarianism} className="icon"/>;
 
   return (
     <div className="character__card">
@@ -15,7 +15,7 @@ function Character (props) {
       
       <div className="character__info">
         <h2 className="character__name">{characterName}</h2>
-        <p className="character__species">Species: {characterSpecies} {Species}</p>
+        <p className="character__species">Species: {characterSpecies} {speciesIcon}</p>
       </div>
     </div>
   )
