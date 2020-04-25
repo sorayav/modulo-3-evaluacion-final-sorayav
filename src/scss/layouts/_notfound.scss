@@ -6,14 +6,14 @@
   align-items: center;
   font-size: 50px;
   color: white;
-  text-shadow: 2px 0 0 #ea36af, -2px 0 0 #75fa69;
+  text-shadow: 2px 0 0 $mainPink, -2px 0 0 $mainGreen;
 
   h2 {
     font-size: 100px;
   }
 
   a {
-    border-bottom: 6px solid #ea36af;
+    border-bottom: 6px solid $mainPink;
     color: white;
     animation-duration: 0.05s;
     animation-name: text-distortion;
@@ -23,10 +23,10 @@
 
   @keyframes text-distortion {
     from {
-      text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+      text-shadow: 1px 0 0 $mainPink, -2px 0 0 $mainGreen;
     }
     to {
-      text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+      text-shadow: 2px 0.5px 2px $mainPink, -1px -0.5px 2px $mainGreen;
     }
   }
 }
@@ -39,7 +39,7 @@
   text-align: center;
   font-size: 40px;
   color: white;
-  text-shadow: 2px 0 0 #ea36af, -2px 0 0 #75fa69;
+  text-shadow: 2px 0 0 $mainPink, -2px 0 0 $mainGreen;
 
   h2 {
     font-size: 50px;
@@ -50,7 +50,7 @@
   }
 
   a {
-    border-bottom: 6px solid #ea36af;
+    border-bottom: 6px solid $mainPink;
     color: white;
     animation-duration: 0.05s;
     animation-name: text-distortion;
@@ -60,10 +60,10 @@
 
   @keyframes text-distortion {
     from {
-      text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+      text-shadow: 1px 0 0 $mainPink, -2px 0 0 $mainGreen;
     }
     to {
-      text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+      text-shadow: 2px 0.5px 2px $mainPink, -1px -0.5px 2px $mainGreen;
     }
   }
 }

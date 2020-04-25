@@ -3,7 +3,7 @@ html {
   background: url('../../images/background2.jpg') repeat;
   background-position-x: -45vw;
   background-position-y: top;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: $mainFont;
 
     @include forMobile {
       background-position: center;
@@ -32,12 +32,12 @@ html {
   vertical-align: baseline;
   font-size: 12px;
   color: black;
-  filter: drop-shadow(0px 1px 1px #ea36af);
+  filter: drop-shadow(0px 1px 1px $mainPink);
   
   &.human {
-    filter: drop-shadow(0px 1px 1px #75fa69);
+    filter: drop-shadow(0px 1px 1px $mainGreen);
   }
   &.dead {
-    filter: drop-shadow(0px 1px 1px #ff1717);
+    filter: drop-shadow(0px 1px 1px $mainRed);
   }
 }

@@ -1,5 +1,6 @@
 footer {
   // height: 5vh;
+  height: 100%;
   width: 100vw;
   position: relative;
   text-align: center;
@@ -8,9 +9,25 @@ footer {
   align-items: center;
   justify-content: center;
   color: white;
-  // margin: 5px 0;
+  font-size: 12px;
+
+  @include forTablet {
+    font-size: 16px;
+  }
   
   a {
     color: white;
+  }
+
+  .footer__socialmedia {
+    margin-left: 10px;
+    
+    .icon__social {
+      padding: 0 2px;
+
+      &:hover {
+        filter: drop-shadow(3px 1px 4px $mainPink);
+      }
+    }
   }
 }

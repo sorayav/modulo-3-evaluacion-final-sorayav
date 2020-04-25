@@ -17,7 +17,7 @@ main {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #19e01f;
+    background-color: $mainGreen;
   }
 
   ul {
@@ -48,7 +48,7 @@ main {
       color: rgba(0, 0, 0, 0.7);
       position: relative;
       box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.4);
-      text-shadow: 0.5px 0 0 #ea36af, -1px 0 0 #75fa69;
+      text-shadow: 0.5px 0 0 $mainPink, -1px 0 0 $mainGreen;
 
       @include forDesktop {
         width: 300px;

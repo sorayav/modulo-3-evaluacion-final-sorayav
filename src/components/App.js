@@ -86,7 +86,7 @@ class App extends React.Component {
           <Route exact path="/">
             <header className="header">
               <h1>Rick and Morty characters</h1>
-              <a href="/" className="logo"><img src={logo} alt="Rick and Morty logo"/></a>
+              <a href="/" className="logo" title="Home"><img src={logo} alt="Rick and Morty logo"/></a>
               <div className="filters">
                 <Filters 
                   handleSearchCharacter={this.handleSearchCharacter} 
@@ -107,7 +107,6 @@ class App extends React.Component {
                 characters={data} 
                 searchCharacter={searchCharacter} />
               }
-              
             </main>
             </Route>
 

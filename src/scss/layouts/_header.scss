@@ -21,7 +21,6 @@ header {
 
   .logo {
     width: 300px;
-    
 
     @include forDesktop {
       position: absolute;
@@ -63,7 +62,7 @@ header {
     
       .reset__btn {
         background-color: transparent;
-        text-shadow: 0.5px 0 0 #ea36af, -1px 0 0 #75fa69;
+        text-shadow: 0.5px 0 0 $mainPink, -1px 0 0 $mainGreen;
         color: white;
         font-size: 16px;
         margin-left: 10px;
@@ -77,10 +76,10 @@ header {
 
   @keyframes text-distortion {
     from {
-      text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+      text-shadow: 1px 0 0 $mainPink, -2px 0 0 $mainGreen;
     }
     to {
-      text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+      text-shadow: 2px 0.5px 2px $mainPink, -1px -0.5px 2px $mainGreen;
     }
   }
 

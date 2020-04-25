@@ -16,7 +16,7 @@
   }
   .character__details--btn {
     width: 115px;
-    background-color: rgb(251, 0, 180);
+    background-color: $mainPink;
     border-radius: 100%;
     padding: 3px;
     margin-bottom: 15px;
@@ -49,7 +49,7 @@
         margin: 10px 0;
         text-align: center;
         line-height: 1.5;
-        text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+        text-shadow: 0.06rem 0 0.06rem $mainPink, -0.125rem 0 0.06rem $mainGreen;
         letter-spacing: 0.125em;
         animation-duration: 0.02s;
         animation-name: text-distortion;
@@ -58,8 +58,8 @@
       }
       .character__details--name {
         font-size: 20px;
-        border-left: 3px solid rgb(251, 0, 180);
-        border-right: 3px solid rgb(106, 255, 8);
+        border-left: 3px solid $mainPink;
+        border-right: 3px solid $mainGreen;
         padding: 0 10px;
 
         &::first-letter {
@@ -69,10 +69,10 @@
 
         @keyframes text-distortion {
           from {
-            text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+            text-shadow: 1px 0 0 $mainPink, -2px 0 0 $mainGreen;
           }
           to {
-            text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+            text-shadow: 2px 0.5px 2px $mainPink, -1px -0.5px 2px $mainGreen;
           }
         }
       }
