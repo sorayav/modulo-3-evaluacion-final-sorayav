@@ -15,9 +15,14 @@ class App extends React.Component {
     this.handleSearchCharacter = this.handleSearchCharacter.bind(this);
     this.renderCharacterDetails = this.renderCharacterDetails.bind(this);
     this.resetInput = this.resetInput.bind(this);
+    this.handleSortCharacters = this.handleSortCharacters.bind(this);
+    this.handleSpecie = this.handleSpecie.bind(this);
     this.state = {
       data: [],
       searchCharacter: '',
+      sortCharacters: false,
+      sortChecked: false,
+      specie: '',
     }
   }
 
@@ -31,8 +36,26 @@ class App extends React.Component {
   }
 
   handleSearchCharacter(value) {
+    this.setState({ searchCharacter: value })
+  }
+
+  handleSortCharacters() {
+    if (this.state.sortCharacters !== true) {
+      this.setState({ sortCharacters: true, sortChecked: true })
+      this.state.data.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
+    } else {
+      this.setState({ sortCharacters: false, sortChecked: false })
+      this.state.data.sort((a, b) => {
+        if (a.id > b.id) { return 1 }
+        if (a.id < b.id) { return -1 }
+        return 0;
+      })
+    }
+  }
+
+  handleSpecie(valueSpecie) {
     this.setState({
-      searchCharacter: value
+      specie: valueSpecie
     })
   }
 
@@ -41,6 +64,7 @@ class App extends React.Component {
       searchCharacter: ''
     })
   }
+
 
   renderCharacterDetails(props) {
     const urlId = props.match.params.id;
@@ -53,7 +77,8 @@ class App extends React.Component {
   }
 
   render() {
-    const {data, searchCharacter} = this.state;
+    const {data, searchCharacter, sortCharacters, sortChecked, specie} = this.state;
+    console.log(this.state.specie)
 
     return (
       <div className="App">
@@ -63,13 +88,24 @@ class App extends React.Component {
               <h1>Rick and Morty characters</h1>
               <a href="/" className="logo"><img src={logo} alt="Rick and Morty logo"/></a>
               <div className="filters">
-                <FilterSearch handleSearchCharacter={this.handleSearchCharacter} searchCharacter={searchCharacter} resetInput={this.resetInput} /> 
+                <FilterSearch 
+                  handleSearchCharacter={this.handleSearchCharacter} 
+                  searchCharacter={searchCharacter} 
+                  resetInput={this.resetInput} 
+                  handleSortCharacters={this.handleSortCharacters} 
+                  sortCharacters={sortCharacters}
+                  sortChecked={sortChecked}
+                  // characterSpecies={specie} 
+                  // handleSpecie={this.handleSpecie} 
+                  /> 
               </div>
             </header>
 
             <main className="main">
               {!data ? <Loader /> : 
-              <CharacterList characters={data} searchCharacter={searchCharacter} />
+              <CharacterList 
+                characters={data} 
+                searchCharacter={searchCharacter} />
               }
               
             </main>
