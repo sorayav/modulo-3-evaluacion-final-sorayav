@@ -4,12 +4,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 20px;
   color: white;
   text-shadow: 2px 0 0 $mainPink, -2px 0 0 $mainGreen;
+  text-align: center;
+  overflow: hidden;
+
+  @include forTablet {
+    font-size: 50px;
+  }
 
   h2 {
-    font-size: 100px;
+    font-size: 45px;
+
+    @include forTablet {
+      font-size: 100px;
+    }
   }
 
   a {
