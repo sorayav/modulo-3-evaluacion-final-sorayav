@@ -1,10 +1,14 @@
 .details {
-  height: 95vh;
+  height: 98vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   color: black;
+
+  @include forTablet {
+    height: 96.9vh;
+  }
 
   a {
     color: white;
