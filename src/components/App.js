@@ -22,7 +22,7 @@ class App extends React.Component {
       data: [],
       searchCharacter: '',
       sortCharacters: false,
-      sortChecked: false,
+      isSortChecked: false,
       specie: '',
     }
   }
@@ -31,7 +31,7 @@ class App extends React.Component {
     fetchCharacters()
     .then(data => {
       this.setState({
-        data: data.results,
+        data: data.results
       })
     });
   }
@@ -42,10 +42,10 @@ class App extends React.Component {
 
   handleSortCharacters() {
     if (this.state.sortCharacters !== true) {
-      this.setState({ sortCharacters: true, sortChecked: true })
+      this.setState({ sortCharacters: true, isSortChecked: true })
       this.state.data.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
     } else {
-      this.setState({ sortCharacters: false, sortChecked: false })
+      this.setState({ sortCharacters: false, isSortChecked: false })
       this.state.data.sort((a, b) => {
         if (a.id > b.id) { return 1 }
         if (a.id < b.id) { return -1 }
@@ -77,8 +77,8 @@ class App extends React.Component {
   }
 
   render() {
-    const {data, searchCharacter, sortCharacters, sortChecked, specie} = this.state;
-    console.log(this.state.specie)
+    const {data, searchCharacter, sortCharacters, isSortChecked, specie} = this.state;
+    // console.log(this.state.specie)
 
     return (
       <div className="App">
@@ -94,7 +94,7 @@ class App extends React.Component {
                   resetInput={this.resetInput} 
                   handleSortCharacters={this.handleSortCharacters} 
                   sortCharacters={sortCharacters}
-                  sortChecked={sortChecked}
+                  isSortChecked={isSortChecked}
                   // characterSpecies={specie} 
                   // handleSpecie={this.handleSpecie} 
                   /> 

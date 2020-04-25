@@ -26,7 +26,7 @@ const FilterSearch = (props) => {
       </div>
       <div className="filters__box2">
         <label htmlFor="sort">Sort alphabetically: </label>
-        <input onChange={handleSort} type="checkbox" id="sort" name="sort" value="sort" checked={props.sortCharacter} checked={props.sortChecked}/>
+        <input onChange={handleSort} type="checkbox" id="sort" name="sort" value="sort" checked={props.sortCharacter} checked={props.isSortChecked}/>
 
       {/* <label htmlFor="filter-specie">Filter by specie:</label>
         <select id="filter-specie" name="filter-specie" value={props.characterSpecies} onChange={handleSpecie}>
