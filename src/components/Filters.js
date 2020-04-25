@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Filters = (props) => {
   const {searchCharacter, resetInput, sortCharacter, isSortChecked} = props;
@@ -13,7 +14,7 @@ const Filters = (props) => {
   const handleSort = () => {
     props.handleSortCharacters();
   }
-  
+
   return (
     <form className="filters__box" onSubmit={preventDefault}>
       <div className="filters__box1">
@@ -46,5 +47,11 @@ const Filters = (props) => {
     </form>
   )
 }
+
+Filters.propTypes = {
+  searchCharacter: PropTypes.string,
+  sortCharacter: PropTypes.bool,
+  isSortChecked: PropTypes.bool
+};
 
 export default Filters;

@@ -2,6 +2,7 @@ import React from 'react';
 import Character from './Character';
 import { Link } from 'react-router-dom';
 import ItDoesntExist from './ItDoesntExist';
+import PropTypes from 'prop-types';
 
 const CharacterList = (props) => {
   const {characters, searchCharacter} = props;
@@ -30,5 +31,9 @@ const CharacterList = (props) => {
     )
   }
 }
+
+CharacterList.propTypes = {
+  searchCharacter: PropTypes.string
+};
 
 export default CharacterList;

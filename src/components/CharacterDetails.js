@@ -3,6 +3,7 @@ import icon from '../images/backhome.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPastafarianism, faRestroom, faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 const CharacterDetails = (props) => {
   const {image, name, species, origin, episode, status} = props.character;
@@ -31,5 +32,13 @@ const CharacterDetails = (props) => {
     </section>
   )
 }
+
+CharacterDetails.propTypes = {
+  image: PropTypes.string,
+  name: PropTypes.string,
+  origin: PropTypes.string,
+  episode: PropTypes.array,
+  status: PropTypes.string
+};
 
 export default CharacterDetails;

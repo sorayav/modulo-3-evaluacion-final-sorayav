@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPastafarianism, faRestroom } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 function Character (props) {
   const {characterImg, characterName, characterSpecies} = props;
@@ -20,5 +21,11 @@ function Character (props) {
     </div>
   )
 }
+
+Character.propTypes = {
+  characterImg: PropTypes.string,
+  characterName: PropTypes.string,
+  characterSpecies: PropTypes.string
+};
 
 export default Character;
