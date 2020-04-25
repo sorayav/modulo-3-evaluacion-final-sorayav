@@ -3,7 +3,7 @@ import '../scss/App.scss';
 import { Route, Switch } from 'react-router-dom';
 import fetchCharacters from '../services/FetchData';
 import CharacterList from './CharacterList';
-import FilterSearch from './FilterSearch';
+import Filters from './Filters';
 import CharacterDetails from './CharacterDetails';
 import Loader from './Loader';
 import logo from '../images/logo.png';
@@ -88,7 +88,7 @@ class App extends React.Component {
               <h1>Rick and Morty characters</h1>
               <a href="/" className="logo"><img src={logo} alt="Rick and Morty logo"/></a>
               <div className="filters">
-                <FilterSearch 
+                <Filters 
                   handleSearchCharacter={this.handleSearchCharacter} 
                   searchCharacter={searchCharacter} 
                   resetInput={this.resetInput} 

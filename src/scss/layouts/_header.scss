@@ -93,11 +93,16 @@ header {
     }
   }
 
-  input[type=text] {
-    border: 1px solid black;
+  input {
+    &[type=text] {
+      border: 1px solid black;
 
-    &:focus {
+      &:focus {
       background-color: cyan;
+      }
+    }
+    &[type=checkbox] {
+      background: cyan;
     }
   }
 }

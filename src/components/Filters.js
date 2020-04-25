@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FilterSearch = (props) => {
+const Filters = (props) => {
   const preventDefault = (ev) => ev.preventDefault();
 
   const handleSearchCharacter = (ev) => {
@@ -39,4 +39,4 @@ const FilterSearch = (props) => {
   )
 }
 
-export default FilterSearch;
+export default Filters;
