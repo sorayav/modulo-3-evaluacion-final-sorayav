@@ -6,7 +6,7 @@ El ejercicio consiste en desarrollar una página web con un listado de personaje
 Puedes acceder a ella a través del [enlace de Github Pages](https://sorayav.github.io/modulo-3-evaluacion-final-sorayav), o de forma local:
 
 1. Descarga o clona el repositorio:
-`git clone https://github.com/Adalab/modulo-3-evaluacion-final-sorayav.git`
+`git clone https://github.com/sorayav/modulo-3-evaluacion-final-sorayav.git`
 2. Instala el sistema de gestión de paquetes para Node.js con `npm install` y arranca la aplicación con  `npm start`.
 
 ## Cómo funciona
